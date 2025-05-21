@@ -1,5 +1,20 @@
 ---
 const pageTitle = "About | Andrew Williams";
+
+const identity = {
+	firstName: "Andrew",
+	country: "United States of America",
+	state: "Florida",
+	occupation: "Service Technician",
+	hobbies: ["weightlifting", "keyboard building"],
+};
+
+const skills = ["C++", "Embedded Systems", "Troubleshooting", "Customer Service"];
+
+const happy = true;
+const finished = true;
+const goal = 3;
+
 ---
 
 <html lang="en">
@@ -18,5 +33,24 @@ const pageTitle = "About | Andrew Williams";
         <h2>Andrew Williams</h2>
         <p>I am going through the Astro tutorial to set up a website. There will be more updates as I progress.</p>
         <p>Look forward to more updates in the future!</p>
+		<p>Here are a few facts about me:</p>
+		<u1>
+			<li>My name is {identity.firstName}.</li>
+			<li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+			{identity.hobbies.length >= 2 &&
+				<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+			}
+		</u1>
+		<p>My skills are:</p>
+		<u1>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</u1>
+
+{happy && <p>I am happy to be learning Astro!</p>}
+
+{finished && <p>I finished this tutorial!</p>}
+
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
 	</body>
 </html>

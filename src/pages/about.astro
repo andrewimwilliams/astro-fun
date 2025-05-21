@@ -1,5 +1,6 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "About | Andrew Williams";
@@ -49,6 +50,6 @@ const fontWeight = "bold";
 		<u1>
 			{skills.map((skill) => <li class="skill">{skill}</li>)}
 		</u1>
-
+		<Footer />
 	</body>
 </html>

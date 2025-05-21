@@ -1,5 +1,6 @@
 ---
-import './styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
 
 const pageTitle = "About | Andrew Williams";
 
@@ -33,9 +34,7 @@ const fontWeight = "bold";
 			}
 		</style>
 	</head>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+	<Navigation />
 	<body>
 		<h1>{pageTitle}</h1>
 		<p>Here are a few facts about me:</p>

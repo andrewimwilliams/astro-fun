@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About | Andrew Williams";
 
@@ -18,41 +16,24 @@ const skills = ["C++", "Embedded Systems", "Troubleshooting", "Customer Service"
 
 const skillColor = "green";
 const fontWeight = "bold";
-
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{skillColor, fontWeight}}>
-			.skill {
-				color : var(--skillColor);
-				font-weight: var(--fontWeight);
-			}
-		</style>
-	</head>
-	<Header />
-	<body>
-		<h1>{pageTitle}</h1>
-		<p>Here are a few facts about me:</p>
-		<u1>
-			<li>My name is {identity.firstName} {identity.lastName}.</li>
-			<li>I currently live in {identity.city}, {identity.state}.</li>
-			{identity.hobbies.length >= 2 &&
-				<li>Some things I enjoy are {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-			}
-		</u1>
-		<p>These are a few of my skills:</p>
-		<u1>
-			{skills.map((skill) => <li class="skill">{skill}</li>)}
-		</u1>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<style define:vars={{skillColor, fontWeight}}>
+		.skill {
+			color : var(--skillColor);
+			font-weight: var(--fontWeight);
+		}
+	</style>
+	<p>Here are a few facts about me:</p>
+	<u1>
+		<li>My name is {identity.firstName} {identity.lastName}.</li>
+		<li>I currently live in {identity.city}, {identity.state}.</li>
+		{identity.hobbies.length >= 2 &&
+			<li>Some things I enjoy are {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+		}
+	</u1>
+	<p>These are a few of my skills:</p>
+	<u1>
+		{skills.map((skill) => <li class="skill">{skill}</li>)}
+	</u1>
+</BaseLayout>

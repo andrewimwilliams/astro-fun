@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true}));
-const pageTitle = "Blog | Andrew Williams";
+const pageTitle = "Andrew Williams | Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<p>Here is where I'll be posting updates about my journey learning Astro.</p>

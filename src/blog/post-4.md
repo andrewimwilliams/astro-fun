@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My Fourth Blog Post'
 pubDate: 2025-05-22
 description: 'This is the fourth post of my new Astro blog.'

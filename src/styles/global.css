@@ -80,6 +80,17 @@ html {
     .hamburger {
       display: none;
     }
+  }
 
+  html.dark {
+    background-color: #4c4c4c;
+    color: #fff;
+  }
   
+  .dark .nav-links a {
+    color: #fff;
+  }
+
+  .dark h1 {
+    color : rgb(229, 238, 255);
   }

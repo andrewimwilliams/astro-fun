@@ -2,7 +2,7 @@
 
 Using the astro.build documentation, I am learning how to build and maintain a website. This website serves as a portfolio for projects I've been working on and where you can learn more about me.
 
-Visit [andrew-williams.info](https://www.andrew-williams.info/) and take a look!
+Visit [astro-fun.pages.dev](https://astro-fun.pages.dev/) and take a look!
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
